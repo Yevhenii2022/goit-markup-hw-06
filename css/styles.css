@@ -501,7 +501,12 @@ img {
 	color: var(--hover-text-color);
 }
 
+.socials-wraper {
+	margin-right: 23px;
+}
+
 .footer-text {
+	display: block;
 	margin-bottom: 20px;
 	font-weight: 700;
 	font-size: 14px;
@@ -525,6 +530,47 @@ img {
 .footer-link:hover,
 .footer-link:focus {
 	background-color: var(--hover-text-color);
+}
+
+.footer-form {
+	display: flex;
+}
+
+.footer-form-input {
+	margin-right: 12px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 16px;
+	width: 358px;
+	height: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+	color: var(--address-text-color);
+	background-color: inherit;
+}
+
+.footer-form-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	flex-basis: 200px;
+	height: 50px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: calc(30 / 16);
+	letter-spacing: 0.06em;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	color: var(--hero-text-color);
+	background: var(--hover-text-color);
+}
+
+.footer-icon-send {
+	fill: var(--hero-text-color);
 }
 
 /* Portfolio page */
@@ -656,6 +702,7 @@ img {
 	transform: translate(-50%, -50%) scale(1);
 	transition: transform var(--transition-function),
 		opacity var(--transition-function);
+	padding: 40px;
 	width: 528px;
 	min-height: 581px;
 	background-color: var(--hero-text-color);
@@ -679,12 +726,168 @@ img {
 	padding: 0;
 	width: 30px;
 	height: 30px;
+	color: var(--logo-bleck-color);
 	background-color: var(--hero-text-color);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	cursor: pointer;
+	transition: color var(--transition-function);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+	color: var(--hover-text-color);
 }
 
 .modal-icon {
-	fill: var(--logo-bleck-color);
+	fill: currentColor;
+}
+
+.modal-strong {
+	display: block;
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: calc(23 / 20);
+	text-align: center;
+	color: var(--title-text-color);
+}
+
+.modal-form-label {
+	font-size: 12px;
+	line-height: calc(14 / 12);
+	letter-spacing: 0.01em;
+	color: var(--primery-text-color);
+}
+
+.modal-form-wraper {
+	position: relative;
+	margin-top: 4px;
+	margin-bottom: 10px;
+}
+
+.modal-form-input {
+	padding: 12px;
+	padding-left: 42px;
+	min-width: 448px;
+	min-height: 40px;
+	outline: none;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	transition: border-color var(--transition-function);
+}
+
+.modal-form-input:focus {
+	border-color: var(--hover-text-color);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+	fill: var(--hover-text-color);
+}
+
+.modal-form-icon {
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+	fill: var(--title-text-color);
+	transition: fill var(--transition-function);
+}
+
+.modal-form-comment {
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 20px;
+	padding: 12px 16px;
+	width: 100%;
+	resize: none;
+	font-size: 12px;
+	line-height: calc(14 / 12);
+	letter-spacing: 0.01em;
+	outline: none;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	transition: border-color var(--transition-function);
+}
+
+.modal-form-comment:focus {
+	border-color: var(--hover-text-color);
+}
+
+.checkbox-wraper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.modal-form-field {
+	font-size: 14px;
+	line-height: calc(24 / 14);
+	color: var(--primery-text-color);
+	user-select: none;
+}
+
+.modal-form-checkbox {
+	position: absolute;
+	width: 16px;
+	height: 15px;
+	top: 50%;
+	left: 9px;
+	transform: translateY(-50%);
+}
+
+.modal-checkbox-icon {
+	position: absolute;
+	top: 50%;
+	left: 9px;
+	transform: translateY(-50%);
+	fill: var(--title-text-color);
+}
+
+.uncheck {
+	opacity: 1;
+	transition: var(--transition-function);
+}
+
+.modal-form-checkbox:checked + .modal-checkbox-icon .uncheck {
+	opacity: 0;
+}
+
+.check {
+	opacity: 0;
+	transition: var(--transition-function);
+}
+
+.modal-form-checkbox:checked + .modal-checkbox-icon .check {
+	opacity: 1;
+}
+
+.form-link {
+	color: var(--hover-text-color);
+	text-decoration-line: underline;
+	text-underline-offset: 3px;
+}
+
+.modal-form-btn {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 52px;
+	min-width: 200px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: calc(30 / 16);
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: var(--hero-text-color);
+	background-color: var(--hover-text-color);
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	transition: box-shadow var(--transition-function);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
